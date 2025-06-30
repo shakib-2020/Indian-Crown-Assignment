@@ -5,14 +5,13 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react"; // Icon for hamburger & close
 
-export const menuItems = [
-  { label: "Home", href: "/" },
-  { label: "Today's Deal", href: "/todays_deal" },
-  { label: "Menu", href: "/menu" },
-  { label: "Find Us", href: "/find_us" },
-];
-
 function Navbar() {
+  const menuItems = [
+    { label: "Home", href: "/" },
+    { label: "Today's Deal", href: "/todays_deal" },
+    { label: "Menu", href: "/menu" },
+    { label: "Find Us", href: "/find_us" },
+  ];
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -24,7 +23,7 @@ function Navbar() {
 
       {/* Desktop Nav */}
       <nav className="hidden md:flex gap-8">
-        {menuItems.map((item) => (
+        {menuItems?.map((item) => (
           <Link
             className="font-semibold text-black/80 transition-all duration-200 hover:text-amber-800"
             key={item.href}

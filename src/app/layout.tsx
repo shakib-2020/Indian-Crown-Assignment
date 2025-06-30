@@ -5,7 +5,9 @@ import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 
 const poppins = Poppins({
+  subsets: ["latin"],
   weight: ["400", "500", "600", "800"],
+  preload: true,
 });
 
 export const metadata: Metadata = {
